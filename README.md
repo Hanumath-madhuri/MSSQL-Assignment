@@ -30,19 +30,18 @@ Typical search patterns:
 •	View new arrivals (last N days).
 
 Step 2: Write & Analyze SQL Queries
+
 Optimization Suggestions
 •	Indexes are Recommended for better query optimization.
 •	Index usage should be verified using execution plans and actual query patterns.
 •	indexes support filtering (WHERE) and sorting/grouping operations efficiently.
 
 Execution Plan Check:
-
 •	This reveal estimated I/O cost, scans/seeks, and missing indexes if any.
 •	Execution plan shows how SQL Server processes a query, which helps identify potential bottlenecks like missing indexes, table scans, or expensive operations.
 •	It Shows the plan without running the query.
 
 Real-World Handling Strategy:
-
 •	Capture slow queries using Query Store or Extended Events.
 •	Analyze execution plans for missing indexes, scans, and key lookups.
 •	Collaborate with developers to review query logic and pagination.
