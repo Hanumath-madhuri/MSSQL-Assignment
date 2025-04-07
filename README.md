@@ -16,22 +16,22 @@ CREATE TABLE Products (
 );
 
 Assumptions:
+
 •	The search query likely filters by ProductName, Category, Price, or InStock.
 •	CreatedAt is used for sorting or filtering recent products.
 •	ProductID is the clustered primary key.
 •	Queries are read-heavy and involve filtering and ordering.
 
 Approach:
-Step 1: Identify Common Queries
 
+Step 1: Identify Common Queries
 Typical search patterns:
 •	Search products in stock by name or category.
 •	Sort by price or filter by price range.
 •	View new arrivals (last N days).
-
 Step 2: Write & Analyze SQL Queries
 
-Optimization Suggestions
+Optimization Suggestions:
 •	Indexes are Recommended for better query optimization.
 •	Index usage should be verified using execution plans and actual query patterns.
 •	indexes support filtering (WHERE) and sorting/grouping operations efficiently.
